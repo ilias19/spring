@@ -59,7 +59,7 @@ public class RecipeController {
 	public RecipeDto convertToDto(Recipe recipe){
 		return modelMapper.map(recipe, RecipeDto.class);
 	}
-	
+	/*
 	public static void main(String [] args){
 		List<Recipe> recipes = new ArrayList<Recipe>();
 		recipes.add(new Recipe(1l,"hh","kk","ll"));
@@ -67,6 +67,6 @@ public class RecipeController {
 	    //System.out.println(RecipeController.convertToDto(recipe).getName());
 		//List<RecipeDto> recips = recipes.stream().map(elt -> RecipeController.convertToDto(elt)).collect(Collectors.toList());
 		//System.out.println(recips.get(0).getName());
-	}
+	}*/
 
 }
