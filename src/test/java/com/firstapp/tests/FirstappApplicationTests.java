@@ -1,4 +1,4 @@
-package com.firstapp.firstapp;
+package com.firstapp.tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

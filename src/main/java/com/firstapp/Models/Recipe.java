@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 
+
+@EntityScan("com.firstapp.models")
 @Entity
 public class Recipe {
 	
