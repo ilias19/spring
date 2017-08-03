@@ -1,6 +1,6 @@
 package com.firstapp.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -9,6 +9,8 @@ import com.firstapp.dto.RecipeDto;
 import com.firstapp.models.Recipe;
 
 public class TestRecipeController {
+	
+
 	
 	@Test
 	public void testDtoConverter(){
