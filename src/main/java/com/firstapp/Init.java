@@ -23,7 +23,7 @@ public class Init {
 	@PostConstruct
 	public void init(){
 		
-		logger.debug("init saving recipes");
+		logger.debug("init saving recipes in db");
 		Recipe recipe1 = Recipe.builder().name("name1").description("description1").imagePath("imagePath1").build();
 		Recipe recipe2 = Recipe.builder().name("name2").description("description2").imagePath("imagePath2").build();
 		recipeRepository.save(Arrays.asList(recipe1,recipe2));
