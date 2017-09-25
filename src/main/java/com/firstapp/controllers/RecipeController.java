@@ -1,16 +1,15 @@
 package com.firstapp.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.firstapp.dto.RecipeDto;
-import com.firstapp.models.Recipe;
-import com.firstapp.repositories.RecipeJpaRepository;
+import com.firstapp.exceptions.EntityNotFoundException;
+import com.firstapp.services.RecipeService;
 
 @RestController
 @RequestMapping("/recipes")
@@ -29,53 +28,63 @@ public class RecipeController {
 	private static Logger logger = LogManager.getLogger();
 	
 	@Autowired
-	private RecipeJpaRepository recipeJpaRepository;
-	
-	private ModelMapper modelMapper = new ModelMapper();
+	private RecipeService recipeService;
+	 
 	
 	@CrossOrigin
-	@GetMapping(value = "/all",
+	@GetMapping(value = "/get/all",
 	           produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public List<RecipeDto> getRecipes(){
-		Function<Recipe,RecipeDto> lambdaConvert =  elt -> convertToDto(elt);
-		List<Recipe> recipes = recipeJpaRepository.findAll();
-		logger.debug("get all recipes");
-		return recipes.stream().map(lambdaConvert).collect(Collectors.toList());
+	public ResponseEntity<List<RecipeDto>> getRecipes(){
+		
+		logger.debug("getRecipes() from controller");
+		return ResponseEntity.ok().body(recipeService.getRecipes());
+	
 				
 	}
 	
-	@GetMapping(value = "/{name}")
-	public RecipeDto getRecipeByName(@PathVariable String name){
-		logger.debug("convert to dto");
-		return convertToDto(recipeJpaRepository.findByName(name));
+	@GetMapping(value = "/getByName/{name}",
+			   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<RecipeDto> getRecipeByName(@PathVariable String name){
+		logger.debug("getRecipeByName("+name+")");
+		try{
+			return ResponseEntity.ok().body(recipeService.getRecipeByName(name));
+		}catch(EntityNotFoundException e){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
 	}
 	
-	@PostMapping(value="/load")
-	public RecipeDto addRecipe(@RequestBody Recipe recipe){
-		logger.debug("saving recipe "+ recipe.getName());
-		recipeJpaRepository.save(recipe);
-		return getRecipeByName(recipe.getName());
-	}
-
-	public RecipeJpaRepository getRecipeJpaRepository() {
-		return recipeJpaRepository;
-	}
-
-	public void setRecipeJpaRepository(RecipeJpaRepository recipeJpaRepository) {
-		this.recipeJpaRepository = recipeJpaRepository;
+	@PostMapping(value="/add")
+	public ResponseEntity  addRecipe(@RequestBody RecipeDto recipe){
+		logger.debug("addRecipe() controller");
+		recipeService.addRecipe(recipe);
+		return new ResponseEntity("Recipe saved successfully", HttpStatus.OK);
 	}
 	
-	public RecipeDto convertToDto(Recipe recipe){
-		return modelMapper.map(recipe, RecipeDto.class);
+	@DeleteMapping(value="/delete/{id}")
+	public ResponseEntity<RecipeDto> deleteRecipeById(@PathVariable Long id){
+		logger.debug("deleteRecipeById("+id+")");
+		recipeService.deleteRecipe(id);
+		return new ResponseEntity("Recipe removed successfully", HttpStatus.OK);
 	}
-	/*
-	public static void main(String [] args){
-		List<Recipe> recipes = new ArrayList<Recipe>();
-		recipes.add(new Recipe(1l,"hh","kk","ll"));
+	
+	@GetMapping(value = "/getById/{id}",
+			   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<RecipeDto> getRecipeById(@PathVariable Long id){
+		logger.debug("getRecipeById("+id+")");
+		try{
+			return ResponseEntity.ok().body(recipeService.getRecipeById(id));
+		}catch(EntityNotFoundException e){
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
+
+
+	
+	public static void main(String [] args){ 
 		//Recipe recipe = new Recipe(1l,"hh","kk","ll");
 	    //System.out.println(RecipeController.convertToDto(recipe).getName());
 		//List<RecipeDto> recips = recipes.stream().map(elt -> RecipeController.convertToDto(elt)).collect(Collectors.toList());
 		//System.out.println(recips.get(0).getName());
-	}*/
+	}
 
 }

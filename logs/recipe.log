@@ -8,3 +8,149 @@
 [DEBUG] 2017-08-08 12:02:11.273 [http-nio-8091-exec-2] RecipeController - get all recipes
 [DEBUG] 2017-08-08 12:29:30.005 [main] Init - init saving recipes
 [DEBUG] 2017-08-08 12:30:02.567 [http-nio-8091-exec-1] RecipeController - get all recipes
+[DEBUG] 2017-08-10 16:59:08.880 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-21 16:42:43.491 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 10:01:11.549 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 10:02:02.672 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 10:05:06.441 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 10:14:19.568 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 11:31:02.398 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 11:36:09.661 [http-nio-8092-exec-8] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 11:36:09.773 [http-nio-8092-exec-8] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 11:36:44.582 [http-nio-8092-exec-7] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 11:36:44.587 [http-nio-8092-exec-7] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 12:00:58.597 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 12:00:59.603 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 12:00:59.606 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:09:47.119 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:09:48.096 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:09:48.098 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:09:48.244 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:09:48.244 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:09:48.248 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:09:48.248 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:29:54.987 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:29:55.973 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:29:55.976 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:29:56.135 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:29:56.135 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:29:56.138 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:29:56.138 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:31:58.126 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:31:59.095 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:31:59.097 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:31:59.249 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:31:59.249 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:31:59.256 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:31:59.257 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:40:26.682 [http-nio-8092-exec-8] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 14:40:26.692 [http-nio-8092-exec-8] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 14:41:05.077 [http-nio-8092-exec-6] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:41:05.077 [http-nio-8092-exec-6] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:41:24.725 [http-nio-8092-exec-4] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 14:41:24.726 [http-nio-8092-exec-4] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 14:42:41.686 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:42:42.680 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:42:42.682 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:42:42.859 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:42:42.859 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:42:42.863 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:42:42.863 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:43:32.667 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:43:33.631 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:43:33.634 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:43:33.805 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:43:33.805 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:43:33.808 [main] RecipeController - getRecipeByName(name19)
+[DEBUG] 2017-09-22 14:43:33.808 [main] RecipeServiceImp - findByEmail(name19)
+[DEBUG] 2017-09-22 14:43:46.519 [http-nio-8092-exec-6] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 14:43:46.520 [http-nio-8092-exec-6] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 14:44:10.309 [http-nio-8092-exec-7] RecipeController - getRecipeByName(recipe1992)
+[DEBUG] 2017-09-22 14:44:10.310 [http-nio-8092-exec-7] RecipeServiceImp - findByEmail(recipe1992)
+[DEBUG] 2017-09-22 14:44:22.716 [http-nio-8092-exec-2] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:44:22.717 [http-nio-8092-exec-2] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:49:39.616 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:53:15.942 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 14:53:16.993 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 14:53:16.995 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 14:53:17.151 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 14:53:17.152 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 14:53:17.155 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:53:17.156 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:53:30.982 [http-nio-8092-exec-10] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 14:53:30.983 [http-nio-8092-exec-10] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 14:53:38.629 [http-nio-8092-exec-6] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 14:53:38.631 [http-nio-8092-exec-6] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 14:53:40.588 [http-nio-8092-exec-4] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 14:53:40.590 [http-nio-8092-exec-4] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 15:03:18.243 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:04:20.344 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:05:26.656 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:09:45.161 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:10:08.522 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:12:49.275 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:16:58.758 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:17:41.544 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:17:59.503 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:18:06.915 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:35:08.098 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:35:19.400 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:35:38.563 [http-nio-8092-exec-9] RecipeController - deleteRecipeById(3)
+[DEBUG] 2017-09-22 15:35:38.563 [http-nio-8092-exec-9] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:35:58.112 [http-nio-8092-exec-4] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 15:35:58.212 [http-nio-8092-exec-4] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 15:36:15.721 [http-nio-8092-exec-7] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 15:36:15.721 [http-nio-8092-exec-7] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:50:46.447 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:50:47.425 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 15:50:47.427 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 15:50:47.586 [main] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 15:50:47.587 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:50:47.601 [main] RecipeController - getRecipeById(2)
+[DEBUG] 2017-09-22 15:50:47.602 [main] RecipeServiceImp - getRecipeById(2)
+[DEBUG] 2017-09-22 15:50:47.619 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 15:50:47.619 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 15:50:47.623 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 15:50:47.623 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 15:53:05.178 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:53:22.832 [http-nio-8092-exec-1] RecipeController - getRecipeById(2)
+[DEBUG] 2017-09-22 15:53:22.834 [http-nio-8092-exec-1] RecipeServiceImp - getRecipeById(2)
+[DEBUG] 2017-09-22 15:53:42.225 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:53:43.219 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 15:53:43.222 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 15:53:43.397 [main] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 15:53:43.398 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:53:43.416 [main] RecipeController - getRecipeById(2)
+[DEBUG] 2017-09-22 15:53:43.416 [main] RecipeServiceImp - getRecipeById(2)
+[DEBUG] 2017-09-22 15:53:43.433 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 15:53:43.433 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 15:53:43.437 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 15:53:43.437 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 15:54:29.549 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 15:54:30.990 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 15:54:30.993 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 15:54:31.205 [main] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 15:54:31.205 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:54:31.223 [main] RecipeController - getRecipeById(2)
+[DEBUG] 2017-09-22 15:54:31.224 [main] RecipeServiceImp - getRecipeById(2)
+[DEBUG] 2017-09-22 15:54:31.240 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 15:54:31.240 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 15:54:31.243 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 15:54:31.243 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 15:55:54.575 [http-nio-8092-exec-10] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 15:55:54.575 [http-nio-8092-exec-10] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 15:56:06.502 [http-nio-8092-exec-7] RecipeController - getRecipes() from controller
+[DEBUG] 2017-09-22 15:56:06.589 [http-nio-8092-exec-7] RecipeServiceImp - getRecipes()
+[DEBUG] 2017-09-22 16:27:37.048 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-22 16:27:38.034 [main] RecipeController - getRecipeByName(name1)
+[DEBUG] 2017-09-22 16:27:38.038 [main] RecipeServiceImp - findByEmail(name1)
+[DEBUG] 2017-09-22 16:27:38.200 [main] RecipeController - deleteRecipeById(2)
+[DEBUG] 2017-09-22 16:27:38.200 [main] RecipeServiceImp - deleteRecipe() from service
+[DEBUG] 2017-09-22 16:27:38.214 [main] RecipeController - getRecipeById(2)
+[DEBUG] 2017-09-22 16:27:38.214 [main] RecipeServiceImp - getRecipeById(2)
+[DEBUG] 2017-09-22 16:27:38.226 [main] RecipeController - addRecipe() controller
+[DEBUG] 2017-09-22 16:27:38.226 [main] RecipeServiceImp - addRecipe() from service
+[DEBUG] 2017-09-22 16:27:38.228 [main] RecipeController - getRecipeByName(name1992)
+[DEBUG] 2017-09-22 16:27:38.228 [main] RecipeServiceImp - findByEmail(name1992)
+[DEBUG] 2017-09-22 16:28:32.325 [main] Init - init saving recipes in db
+[DEBUG] 2017-09-25 14:11:34.068 [main] RecipeController - getRecipeByName(name1)
