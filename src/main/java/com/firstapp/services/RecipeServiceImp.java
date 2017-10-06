@@ -3,7 +3,6 @@ package com.firstapp.services;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,15 +24,16 @@ public class RecipeServiceImp implements RecipeService{
 	private RecipeJpaRepository recipeJpaRepository;
 
 	@Override
-	public List<RecipeDto> getRecipes(){
+	public List<Recipe> getRecipes(){
 		
 		Function<Recipe,RecipeDto> lambdaConvert =  elt -> convertToDto(elt);
 		List<Recipe> recipes = recipeJpaRepository.findAll();
 		logger.debug("getRecipes()");
-		return recipes.stream().map(lambdaConvert).collect(Collectors.toList());
+		//return recipes.stream().map(lambdaConvert).collect(Collectors.toList());
+		return recipes;
 	}
 	
-	public RecipeDto getRecipeByName(String name) throws EntityNotFoundException{
+	public Recipe getRecipeByName(String name) throws EntityNotFoundException{
 		
 		    logger.debug("findByEmail({})", name);
 
@@ -43,20 +43,25 @@ public class RecipeServiceImp implements RecipeService{
 	            throw new EntityNotFoundException(String.format("Recipe with userName %s does not exist", recipe));
 	        }
 	        
-	        return convertToDto(recipe.get());
+	       // return convertToDto(recipe.get());
+	        return recipe.get();
 	}
 	
 	
 	public RecipeDto convertToDto(Recipe recipe){
-		ModelMapper modelMapper = new ModelMapper();
-		return modelMapper.map(recipe, RecipeDto.class);
+		/*ModelMapper modelMapper = new ModelMapper();
+		RecipeDto recipeDto = modelMapper.map(recipe, RecipeDto.class);*/
+		RecipeDto recipeDto = new RecipeDto(recipe.getId(),recipe.getName(),recipe.getDescription(),recipe.getImagePath(),recipe.getIngredients());
+		//recipeDto.setIngredients(recipe.getIngredients());
+		return recipeDto;
 	}
 
 	@Override
-	public RecipeDto addRecipe(RecipeDto recipeDto) {
+	public Recipe addRecipe(Recipe recipe) {
 		logger.debug("addRecipe() from service");
-		Recipe recipe = convertFromDto(recipeDto);
-		return convertToDto((Recipe)recipeJpaRepository.save(recipe));
+		//Recipe recipe = convertFromDto(recipeDto);
+		//return convertToDto((Recipe)recipeJpaRepository.save(recipe));
+		return recipeJpaRepository.save(recipe);
 	}
 	
 	public Recipe convertFromDto(RecipeDto recipe){
@@ -73,7 +78,7 @@ public class RecipeServiceImp implements RecipeService{
 
 
 	@Override
-	public RecipeDto getRecipeById(Long id) throws EntityNotFoundException {
+	public Recipe getRecipeById(Long id) throws EntityNotFoundException {
 		logger.debug("getRecipeById({})", id);
 
         Optional<Recipe> recipe = Optional.ofNullable(recipeJpaRepository.getOne(id));
@@ -82,7 +87,9 @@ public class RecipeServiceImp implements RecipeService{
             throw new EntityNotFoundException(String.format("Recipe with id %s does not exist", recipe));
         }
         
-        return convertToDto(recipe.get());
+        //return convertToDto(recipe.get());
+       return recipe.get();
 	}
+
 
 }

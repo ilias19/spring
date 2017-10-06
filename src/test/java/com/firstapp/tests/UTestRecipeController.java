@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import com.firstapp.controllers.RecipeController;
 import com.firstapp.dto.RecipeDto;
-import com.firstapp.exceptions.EntityNotFoundException;
+import com.firstapp.models.Recipe;
 import com.firstapp.services.RecipeServiceImp;
 
 @RunWith(SpringRunner.class)
@@ -32,7 +32,7 @@ public class UTestRecipeController {
 	@Test
 	public void testGetRecipeByName() throws Exception{
 		
-		RecipeDto recipe = RecipeDto.builder().id(1L).name("name1").imagePath("imagePath1").description("description1").build();
+		Recipe recipe = Recipe.builder().id(1L).name("name1").imagePath("imagePath1").description("description1").build();
 		
 		Mockito.when(
 				service.getRecipeByName(Mockito.anyString())).thenReturn(recipe);
@@ -45,9 +45,7 @@ public class UTestRecipeController {
 
 		System.out.println(result.getResponse());
 		String expected = "{id:1,name:name1,description:description1,imagePath:imagePath1}";
-
-		// {"id":"Course1","name":"Spring","description":"10 Steps, 25 Examples and 10K Students","steps":["Learn Maven","Import Project","First Example","Second Example"]}
-
+		
 		JSONAssert.assertEquals(expected, result.getResponse()
 				.getContentAsString(), false);
 	}

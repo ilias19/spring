@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.firstapp.dto.RecipeDto;
 import com.firstapp.exceptions.EntityNotFoundException;
+import com.firstapp.models.Recipe;
 import com.firstapp.services.RecipeService;
 
 @RestController
@@ -34,7 +35,7 @@ public class RecipeController {
 	@CrossOrigin
 	@GetMapping(value = "/get/all",
 	           produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<List<RecipeDto>> getRecipes(){
+	public ResponseEntity<List<Recipe>> getRecipes(){
 		
 		logger.debug("getRecipes() from controller");
 		return ResponseEntity.ok().body(recipeService.getRecipes());
@@ -44,7 +45,7 @@ public class RecipeController {
 	
 	@GetMapping(value = "/getByName/{name}",
 			   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<RecipeDto> getRecipeByName(@PathVariable String name){
+	public ResponseEntity<Recipe> getRecipeByName(@PathVariable String name){
 		logger.debug("getRecipeByName("+name+")");
 		try{
 			return ResponseEntity.ok().body(recipeService.getRecipeByName(name));
@@ -54,7 +55,7 @@ public class RecipeController {
 	}
 	
 	@PostMapping(value="/add")
-	public ResponseEntity  addRecipe(@RequestBody RecipeDto recipe){
+	public ResponseEntity  addRecipe(@RequestBody Recipe recipe){
 		logger.debug("addRecipe() controller");
 		recipeService.addRecipe(recipe);
 		return new ResponseEntity("Recipe saved successfully", HttpStatus.OK);
@@ -69,7 +70,7 @@ public class RecipeController {
 	
 	@GetMapping(value = "/getById/{id}",
 			   produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public ResponseEntity<RecipeDto> getRecipeById(@PathVariable Long id){
+	public ResponseEntity<Recipe> getRecipeById(@PathVariable Long id){
 		logger.debug("getRecipeById("+id+")");
 		try{
 			return ResponseEntity.ok().body(recipeService.getRecipeById(id));

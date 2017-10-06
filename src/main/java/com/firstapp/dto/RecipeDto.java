@@ -1,5 +1,9 @@
 package com.firstapp.dto;
 
+import java.util.List;
+
+import com.firstapp.models.Ingredient;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -17,6 +21,7 @@ public class RecipeDto {
 	private String name;
 	private String description;
 	private String imagePath;
+	private List<Ingredient> ingredients;
 	
 
 

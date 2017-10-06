@@ -28,7 +28,7 @@ public class ITestRecipeController {
 	
 	@Test
 	public void testDtoConverter(){
-		Recipe recipe =  new Recipe(1l,"name","description","imagePath");
+		Recipe recipe =  new Recipe(1l,"name","description","imagePath",null);
 		//RecipeServiceImp recipeService = new RecipeServiceImp();
 		RecipeDto dto = service.convertToDto(recipe);
 		assertEquals(recipe.getName(),dto.getName());
@@ -38,23 +38,23 @@ public class ITestRecipeController {
 	
 	@Test
 	public void testFindRecipeByName(){
-		ResponseEntity<RecipeDto> response = controller.getRecipeByName("name1");
+		ResponseEntity<Recipe> response = controller.getRecipeByName("name1");
 		assertEquals(response.getStatusCode(),HttpStatus.OK);
 	}
 	
 	@Test
 	public void testAddRecipe(){
 		Recipe recipe =  Recipe.builder().name("name1992").description("description").imagePath("imagePath").build();
-		RecipeDto dto = service.convertToDto(recipe);
-		controller.addRecipe(dto);
-		ResponseEntity<RecipeDto> response = controller.getRecipeByName("name1992");
+		//RecipeDto dto = service.convertToDto(recipe);
+		controller.addRecipe(recipe);
+		ResponseEntity<Recipe> response = controller.getRecipeByName("name1992");
 		assertEquals(response.getStatusCode(),HttpStatus.OK);
 	}
 	
 	@Test
 	public void testDeleteRecipe(){
 		controller.deleteRecipeById(2L);
-		ResponseEntity<RecipeDto> response = controller.getRecipeById(2L);
+		ResponseEntity<Recipe> response = controller.getRecipeById(2L);
 		assertEquals(response.getStatusCode(),HttpStatus.NOT_FOUND);
 	}
 
